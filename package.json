@@ -1,5 +1,24 @@
 {
-  "name": "JobList",
+  "name": "joblist",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "application.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dzonyy/JobList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dzonyy/JobList/issues"
+  },
+  "homepage": "https://github.com/Dzonyy/JobList#readme"
 }
