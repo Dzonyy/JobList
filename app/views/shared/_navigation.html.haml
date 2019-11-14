@@ -1,0 +1,15 @@
+%nav.navbar.navbar-light.bg-light
+  = link_to('JobList', root_path, class: 'navbar-brand')
+  %button.navbar-toggler{"aria-controls": "navbarNav", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-target": "#navbarNav", "data-toggle": "collapse", type: "button"}
+    %span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      - if current_user
+        %li.nav-item
+          %p= current_user.id
+          = link_to('Log Out', logout_path)
+      - else
+        %li.nav-item.active
+          = link_to('Log In' , new_session_path, class: 'nav-link')
+        %li.nav-item
+          = link_to('Sign In' , new_user_path, class: 'nav-link')
