@@ -1,0 +1,11 @@
+%table.table.table-hover.table-bordered.table_box
+  %thead
+    %tr
+      %th= admin_label('email')
+      %th.col-300.actions= t('simple_form.labels.actions')
+  %tbody
+    - resources.each do |resource|
+      %tr{ data: { id: resource.id } }
+        %td= resource.email
+        %td.actions.col-300
+          = render partial: 'list_actions', locals: { resource: resource }

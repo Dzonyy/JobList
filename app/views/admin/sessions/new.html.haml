@@ -1,5 +1,10 @@
-= simple_form_for(@employee) do |f|
-  = f.input :email
-  = f.input :password
-  = f.input :password_confirmation
-  = f.button :submit
+.container-fluid
+  .row
+    .col
+      
+    .col
+      = simple_form_for(@employee) do |f|
+        = f.input :email
+        = f.input :password
+        = f.input :password_confirmation
+        = f.button :submit
