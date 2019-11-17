@@ -1,6 +1,5 @@
 module Admin
   class ApplicationController < ::ApplicationController
-    # before_action :authenticate_employee!
     
     layout :set_layout
     
@@ -22,8 +21,8 @@ module Admin
       "%#{params[param]}%"
     end
     
-    # def current_ability
-    #   @current_ability ||= Ability.new(current_employee)
-    # end
+    def current_ability
+      @current_ability ||= Ability.new(current_employee)
+    end
   end
 end

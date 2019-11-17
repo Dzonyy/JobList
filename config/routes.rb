@@ -12,15 +12,15 @@ Rails.application.routes.draw do
 
   namespace :admin do
     
-    root 'jobs#index'
+    root to: 'jobs#index'
 
     get 'login', to: 'sessions#new', as: 'login'
     post 'login', to: 'sessions#create'
     get 'logout', to: 'sessions#destroy', as: 'logout'
 
-    resources :jobs
-    resources :employees
-    resources :users
+    resources :jobs, except: :show
+    resources :employees, except: :show
+    resources :users, except: :show
 
   end
 end
