@@ -1,4 +1,4 @@
 module Admin
-  class UsersController < ResourcesController
+  class UsersController < ResourceController
   end
 end

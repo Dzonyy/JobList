@@ -1,17 +1,17 @@
 module Admin
   class ApplicationController < ::ApplicationController
     
-    layout :set_layout
+    # layout :set_layout
     
-    private
+    # private
 
-    def set_layout
-      if request.xhr?
-        false
-      else
-        'admin'
-      end
-    end
+    # def set_layout
+    #   if request.xhr?
+    #     false
+    #   else
+    #     'admin'
+    #   end
+    # end
 
     def query_param?
       params[:s].present?

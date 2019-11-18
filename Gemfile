@@ -59,4 +59,5 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 
+gem 'kaminari'
 gem 'will_paginate'
