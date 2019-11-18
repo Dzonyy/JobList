@@ -1,0 +1,15 @@
+
+.admin-nav
+  .admin-nav-left
+  .admin-nav-right
+    = render 'admin_buttons'
+
+= render 'flash'
+
+.widget
+  .widget-header= t("resource.#{singular_name}.name")
+  .widget-body
+    = render 'list'
+- if resources.respond_to?(:total_pages)
+  .table-pagination
+    = will_paginate(resources)

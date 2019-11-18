@@ -97,8 +97,8 @@ module Admin
       params.require(singular_name).permit(permitted_params)
     end
 
-    # def translate(key, options = {})
-    #   t("resource.#{resource_name.gsub('/', '_').singularize}.#{key}", options)
-    # end
+    def translate(key, options = {})
+      t("resource.#{resource_name.gsub('/', '_').singularize}.#{key}", options)
+    end
   end
 end
