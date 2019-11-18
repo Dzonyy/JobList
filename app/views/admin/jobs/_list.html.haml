@@ -2,16 +2,10 @@
   %thead
     %tr
       %th= admin_label('title')
-      %th= admin_label('published_at')
-      %th= admin_label('author')
-      %th= admin_label('article_category')
       %th.col-300.actions= t('simple_form.labels.actions')
   %tbody
     - resources.each do |resource|
       %tr{ data: { id: resource.id } }
         %td= resource.title
-        %td.col-250= resource.published_at&.strftime('%d.%m.%Y %H:%M')
-        %td.col-250= resource.author
-        %td.col-250= resource.article_category
         %td.actions.col-300
           = render partial: 'list_actions', locals: { resource: resource }
