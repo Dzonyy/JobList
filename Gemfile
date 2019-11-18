@@ -58,3 +58,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'friendly_id', '~> 5.2.4'
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
+
+gem 'will_paginate'

@@ -1,7 +1,10 @@
 module Admin
-  class EmployeesController < ::Admin::ApplicationController
-    def index
-      @employees = Employee.all
+  class EmployeesController < ResourceController
+
+    private
+
+    def permitted_params
+      %i[:email :password]
     end
   end
 end
