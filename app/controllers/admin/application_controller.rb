@@ -1,9 +1,11 @@
 module Admin
   class ApplicationController < ::ApplicationController
+    # before_action :authenticate_employee!
+    # skip_before_action :load_basket
     
     # layout :set_layout
     
-    # private
+    private
 
     # def set_layout
     #   if request.xhr?
@@ -21,8 +23,8 @@ module Admin
       "%#{params[param]}%"
     end
     
-    # def current_ability
-    #   @current_ability ||= Ability.new(current_employee)
-    # end
+    def current_ability
+      @current_ability ||= Ability.new(current_employee)
+    end
   end
 end

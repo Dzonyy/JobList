@@ -1,0 +1,366 @@
+pl:
+  activemodel:
+    attributes:
+      contact_email:
+        full_name: Imię
+        email: E-mail
+        phone: Telefon
+        message: Wiadomość
+      product_email:
+        product_name: Nazwa produktu
+        email: E-mail
+        message: Wiadomość
+  activerecord:
+    attributes:
+      subscribe_email:
+        accept_terms: Akceptuje warunki
+      job:
+        meta_title: Yoo
+      customer:
+        orders_count: Liczba zamówień
+        remember_me: Pamiętaj logowanie
+        full_name: Imię i nazwisko
+        password: Hasło
+        password_confirmation: Potwierdzenie hasła
+        current_password: Aktualne hasło
+        email: Adres e-mail
+        street: Ulica
+        zipcode: Kod pocztowy
+        city: Miasto
+        phone_number: Numer telefonu
+        is_company: Konto firmowe?
+        company_name: Nazwa firmy
+        first_name: Imię
+        last_name: Nazwisko
+        nip_number: Numer NIP
+        accept_rule: Regulamin sklepu Esplori.pl
+        accept_rule_text: "Zgadzam się z <a href='/p/regulamin' target='_blank'>Regulaminem</a> oraz <a href='/p/polityka-prywatnosci' target='_blank'>Polityką Prywatności</a> sklepu Esplori.pl"
+        marketing_agreement: 'Wyrażam zgodę na przetwarzanie moich danych osobowych przez serwis Esplori.pl dla potrzeb marketingowych.'
+      static_page:
+        title: Nazwa
+        content: Treść
+        meta_title: Tytuł SEO
+        meta_description: Opis SEO
+        in_navigation: Wyświetl w nawigacji stron tekstowych
+      slider_item:
+        description: Tekst
+        image: Zdjęcie
+        url: Adres docelowy
+        active: Aktywność
+      menu_item:
+        label: Tekst etykiety
+        parent: Menu nadrzędne
+        kind: Typ linku
+        category: Kategoria
+        product: Produkt
+        url: Adres URL
+        static_page: Strona statyczna
+      order:
+        street: Ulica
+        number: Numer
+        password: Hasło
+        password_confirmation: Potwierdzenie hasła
+        email: Adres e-mail
+        zip_code: Kod pocztowy
+        country: Kraj
+        city: Miasto
+        customer_name: Nazwa klienta
+        created_at: Utworzone
+        state_name: Stan zamówienia
+        phone_number: Numer telefonu
+        accept_rule: Regulamin sklepu Esplori.pl
+        accept_rule_text: "Zgadzam się z <a href='/p/regulamin' target='_blank'>Regulaminem</a> oraz <a href='/p/polityka-prywatnosci' target='_blank'>Polityką Prywatności</a> sklepu Esplori.pl"
+        marketing_agreement: 'Wyrażam zgodę na przetwarzanie moich danych osobowych przez serwis Esplori.pl dla potrzeb marketingowych.'
+        first_name: Imię
+        last_name: Nazwisko
+        comments: Wiadomość dla dostawcy max. 100 znaków
+        different_address:
+        delivery_address: Twoje adresy
+        delivery_street: Ulica
+        delivery_number: Numer
+        delivery_city: Miasto
+        delivery_country: Kraj
+        delivery_zip_code: Kod pocztowy
+        invoice_street: Ulica i numer
+        invoice_city: Miasto
+        invoice_full_name: Imię i nazwisko
+        invoice_company: Nazwa firmy
+        invoice_nip_number: Numer NIP
+        invoice_zip_code: Kod pocztowy
+        aasm_state: Status
+        aasm_states:
+          created: Utworzone
+          cancelled: Anulowane
+          paid: Opłacone
+          shipped: Wysłane
+      orders/delivery_method:
+        name: Nazwa
+        price: Koszt
+      orders/payment_method:
+        name: Nazwa
+        description: Opis metody płatności
+      category_feature:
+        name: Nazwa cechy
+        is_technical: Dane techniczne?
+        is_filter: Filtr katalogu?
+      category:
+        products_count: Liczba produktów
+        template_products_count: Liczba produktów bazowych
+        name: Nazwa kategorii
+        image: Miniatura kategorii
+        active: Aktywność
+        equipment_categories: Kategorie wyposażenia
+        accessories_categories: Kategorie osprzętu
+        parent: Kategoria nadrzędna
+        description: Opis
+        description1_heading: Nagłówek - sekcja 1
+        description2_heading: Nagłówek - sekcja 2
+        description3_heading: Nagłówek - sekcja 3
+        description4_heading: Nagłówek - sekcja 4
+        description5_heading: Nagłówek - sekcja 5
+        description1_is_comparable: Pokaż opis 1 w porównywarce.
+        description2_is_comparable: Pokaż opis 2 w porównywarce.
+        description3_is_comparable: Pokaż opis 3 w porównywarce.
+        description4_is_comparable: Pokaż opis 4 w porównywarce.
+        description5_is_comparable: Pokaż opis 5 w porównywarce.
+        variants_heading: Nagłówek wariantów
+      producer:
+        products_count: Liczba produktów
+        name: Nazwa producenta
+        logo: Logo
+        description: Opis
+        meta_title: Tytuł SEO
+        meta_description: Opis SEO
+      employee:
+        first_name: Imię
+        remember_me: Zapamiętaj logowanie
+        last_name: Nazwisko
+        full_name: Imię i Nazwisko
+        email: Adres e-mail
+        password: Hasło
+        password_confirmation: Potwierdzenie hasła
+        phone_number: Numer telefonu
+        role: Funkcja
+        meta_title: Tytuł SEO
+        meta_description: Opis SEO
+        role_list:
+          administrator: Administrator
+          office: Biuro
+  simple_form:
+    "yes": 'Tak'
+    "no": 'Nie'
+    hints:
+      product:
+        price: Cena brutto po jakiej sprzedawany będzie produkt
+        full_price: Cena brutto przed rabatem
+    labels:
+      actions: Operacje
+      back: Cofnij
+      q:
+        name_cont: Nazwa
+        ean_cont: EAN
+        category_id_eq: Kategoria
+        producer_id_eq: Producent
+        first_name_cont: Imię
+        last_name_cont: Nazwisko
+        email_cont: E-mail
+        company_name_cont: Nazwa firmy
+        nip_number_cont: Numer NIP
+        city_cont: Miasto
+        customer_cont: Klient
+        state_name_cont: Stan zamówienia
+        created_at_cont: Data utworzenia
+    required:
+      text: 'wymagane'
+      mark: '*'
+  resource:
+    setting:
+      edit_resources: Edycja ustawień
+      resources_list: Ustawienia
+      flash:
+        update_success: Ustawienia zostały zapisane
+    article:
+      name: Artykuły
+      new_resource: Nowy artykuł
+      resources_list: Lista artykułów
+      edit_resource: Edycja artykułu
+      flash: 
+        create_success: Nowy artykuł został utworzony
+        update_success: Artykuł został zaktualizowany
+        destroy_success: Artykuł został usunięty
+    customer:
+      name: Klienci
+      new_resource: Nowy klient
+      resources_list: Lista klientów
+      edit_resource: Edycja klienta
+      flash: 
+        create_success: Nowy klient został utworzony
+        update_success: Klient został zaktualizowany
+        destroy_success: Klient został usunięty
+    product:
+      name: Produkty
+      new_resource: Nowy produkt
+      resources_list: Lista produktów
+      edit_resource: Edycja produktu
+      flash: 
+        create_success: Nowy produkt został utworzony
+        update_success: Produkt został zaktualizowany
+        destroy_success: Produkt został usunięty
+    orders_delivery_method:
+      name: Metody dostawy
+      new_resource: Nowa metoda dostawy
+      resources_list: Lista metod dostawy
+      edit_resource: Edycja metody dostawy
+      flash: 
+        create_success: Nowa metoda dostawy została utworzona
+        update_success: Metoda dostawy została zaktualizowana
+        destroy_success: Metoda dostawy została usunięta
+    orders_payment_method:
+      name: Metody płatności
+      new_resource: Nowa metoda płatności
+      resources_list: Lista metod płatności
+      edit_resource: Edycja metody płatności
+      flash: 
+        create_success: Nowa metoda płatności została utworzona
+        update_success: Metoda płatności została zaktualizowana
+        destroy_success: Metoda płatności została usunięta
+    employee:
+      name: Pracownicy
+      new_resource: Nowy pracownik
+      resources_list: Lista pracowników
+      edit_resource: Edycja pracownika
+      flash:
+        create_success: Nowy pracownik został utworzony
+        update_success: Pracownik został zaktualizowany
+        destroy_success: Pracownik został usunięty
+    producer:
+      name: Producenci
+      new_resource: Nowy producent
+      resources_list: Lista producentów
+      edit_resource: Edycja producenta
+      flash:
+        create_success: Nowy producent został utworzony
+        update_success: Producent został zaktualizowany
+        destroy_success: Producent został usunięty
+    category:
+      name: Kategorie
+      new_resource: Nowa kategoria
+      resources_list: Lista kategorii
+      edit_resource: Edycja kategorii
+      flash:
+        create_success: Nowa kategoria została utworzona
+        update_success: Kategoria została zaktualizowana
+        destroy_success: Kategoria została usunięta
+    category_feature:
+      name: Cechy kategorii
+      new_resource: Nowa cecha kategorii
+      resources_list: Lista cech kategorii
+      edit_resource: Edycja cechy kategorii
+      flash:
+        create_success: Nowa cecha kategorii została utworzona
+        update_success: Cecha kategorii została zaktualizowana
+        destroy_success: Cecha kategorii została usunięta
+        copy_all_success: Cechy kategorii zostały skopiowane
+    slider_item:
+      name: Slider
+      new_resource: Nowy slide
+      resources_list: Lista slidów
+      edit_resource: Edycja slide
+      flash:
+        create_success: Nowy slide został utworzony
+        update_success: Slide został zaktualizowany
+        destroy_success: Slide został usunięty
+    menu_item:
+      name: Elementy menu
+      new_resource: Nowy element menu
+      resources_list: Lista elementów menu
+      edit_resource: Edycja elementu menu
+      flash:
+        create_success: Nowy element menu został utworzon
+        update_success: Element menu został zaktualizowany
+        destroy_success: Element menu został usunięty
+    static_page:
+      name: Strony tekstowe
+      new_resource: Nowa strona tekstowa
+      resources_list: Lista stron tekstowych 
+      edit_resource: Edycja strony
+      flash:
+        create_success: Nowa strona tekstowa została utworzona
+        update_success: Strona tekstowa została zaktualizowana
+        destroy_success: Strona tekstowa została usunięta
+    article_category:
+      name: Kategorie artykułów
+      new_resource: Nowa kategoria artykułów
+      resources_list: Lista kategoria artykułów
+      edit_resource: Edycja kategoria artykułów
+      flash:
+        create_success: Nowa kategoria artykułów została utworzona
+        update_success: Kategoria artykułów została zaktualizowana
+        destroy_success: Kategoria artykułów została usunięta
+    tag:
+      name: Tagi
+      new_resource: Nowy tag
+      resources_list: Lista tagów
+      edit_resource: Edycja tagu
+      flash: 
+        create_success:  Nowy tag został utworzony
+        update_success: Tag został zaktualizowany
+        destroy_success: Tag został usunięty
+
+  helpers:
+    submit:
+      subscribe_email:
+        create  : Zapisz się do newslettera
+      orders_delivery_method:
+        create: Dodaj metodę dostawy
+      customer:
+        create: Dodaj klienta
+        change_password: Zmień hasło
+      orders_payment_method:
+        create: Dodaj metodę płatności
+      menu_item:
+        create: Dodaj element menu
+      setting:
+        submit: Zapisz ustawienia
+      producer:
+        create: Dodaj producenta
+      slider_item:
+        create: Dodaj slide
+      employee:
+        create: Dodaj pracownika
+        sign_in: Zaloguj
+      static_page:
+        create: Dodaj strone tekstowa 
+      article_category:
+        create: Dodaj kategorie artykułu
+      address:
+        create: Dodaj adres
+      category:
+        create: Dodaj kategorię
+      category_feature:
+        create: Dodaj cechę kategorii
+      product:
+        create: Dodaj produkt
+      tag:
+        create: Dodaj tag
+      article:
+        create: Dodaj artykuł
+      contact_email:
+        create: Wyślij
+      update: Zapisz zmiany
+      product_email:
+        create: Wyślij
+  are_you_sure_to_destroy: Czy na pewno usunąć?
+  errors:
+    messages:
+      content_type_invalid: 'jest niepoprawnego typu (%{content_type})'
+
+  number:
+    currency:
+      format:
+        unit: 'zł'
+        delimiter: ' '
+        separator: ','
+        precision: 2
+        strip_insignificant_zeros: false
+        format: '%n %u'

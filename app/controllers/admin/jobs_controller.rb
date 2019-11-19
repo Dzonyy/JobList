@@ -1,10 +1,11 @@
 module Admin
-  class JobsController < ResourceController
+  class JobsController < Admin::ResourceController
 
     private
 
     def permitted_params
-      %i[:name]
+      %i[name]
     end
   end
 end
+

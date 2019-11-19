@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#index'
 
   resources :users
@@ -11,7 +12,6 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   namespace :admin do
-    
     root to: 'jobs#index'
 
     get 'login', to: 'sessions#new', as: 'login'
@@ -21,6 +21,5 @@ Rails.application.routes.draw do
     resources :jobs, except: :show
     resources :employees, except: :show
     resources :users, except: :show
-
   end
 end

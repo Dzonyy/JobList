@@ -59,6 +59,11 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 
+# devise
+gem 'cancancan'
+gem 'devise'
+gem 'devise-i18n'
+
 gem 'kaminari'
 gem 'will_paginate'
 
@@ -66,3 +71,5 @@ gem 'active_link_to'
 gem 'rails-i18n'
 gem 'active_storage_validations'
 gem 'email_validator'
+
+gem 'meta-tags'
