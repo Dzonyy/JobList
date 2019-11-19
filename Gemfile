@@ -61,3 +61,8 @@ gem 'simple_form'
 
 gem 'kaminari'
 gem 'will_paginate'
+
+gem 'active_link_to'
+gem 'rails-i18n'
+gem 'active_storage_validations'
+gem 'email_validator'
