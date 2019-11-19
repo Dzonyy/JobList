@@ -1,14 +1,14 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user
-  # layout :configure_layout
+  layout :configure_layout
 
-  # def configure_layout
-  #   if resource_name == :employee
-  #     'login'
-  #   else
-  #     'application'
-  #   end
-  # end
+  def configure_layout
+    if devise_controller? && resource_name == :employee
+      'login'
+    else
+      'application'
+    end
+  end
+  
   def query_param?
     params[:s].present?
   end
