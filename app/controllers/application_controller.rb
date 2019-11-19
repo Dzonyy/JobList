@@ -24,13 +24,4 @@ class ApplicationController < ActionController::Base
   def back_path(default = '/')
     request.headers["X-XHR-Referer"] || request.referer || default
   end
-  
-  def current_user
-    if session[:user_id]
-      @current_user ||= User.find(session[:user_id])
-    else
-      @current_user = nil
-    end
-  end
-  
 end
