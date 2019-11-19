@@ -1,8 +1,8 @@
--# :ruby
--#   title([
--#     t("resource.#{singular_name}.resources_list"),
--#     t("resource.#{singular_name}.#{resource.persisted? ? 'edit_resource' : 'new_resource'}", resource_id: resource.id)
--#   ])
+:ruby
+  title([
+    t("resource.#{singular_name}.resources_list"),
+    t("resource.#{singular_name}.#{resource.persisted? ? 'edit_resource' : 'new_resource'}", resource_id: resource.id)
+  ])
 
 - content_for(:heading) do
   - if resource.persisted?
