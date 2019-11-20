@@ -1,5 +1,5 @@
 module Admin
-  class JobsController < Admin::ResourceController
+  class JobsController < ResourceController
 
     private
 

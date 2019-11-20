@@ -1,19 +1,18 @@
 module Admin
   class ApplicationController < ::ApplicationController
-    # before_action :authenticate_employee!
-    # skip_before_action :load_basket
+    before_action :authenticate_employee!
     
-    # layout :set_layout
+    layout :set_layout
     
     private
 
-    # def set_layout
-    #   if request.xhr?
-    #     false
-    #   else
-    #     'admin'
-    #   end
-    # end
+    def set_layout
+      if request.xhr?
+        false
+      else
+        'admin'
+      end
+    end
 
     def query_param?
       params[:s].present?
