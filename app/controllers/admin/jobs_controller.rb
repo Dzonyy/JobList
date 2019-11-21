@@ -1,5 +1,9 @@
 module Admin
   class JobsController < ResourceController
+    
+    # def index
+    #   @jobs = Job.all
+    # end
 
     private
 

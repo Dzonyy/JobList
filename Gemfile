@@ -64,7 +64,6 @@ gem 'cancancan'
 gem 'devise'
 gem 'devise-i18n'
 
-gem 'kaminari'
 gem 'will_paginate'
 
 gem 'active_link_to'

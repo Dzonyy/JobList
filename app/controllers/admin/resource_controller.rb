@@ -3,18 +3,16 @@ module Admin
     helper_method :resources_path, :new_resource_path,
                   :edit_resource_path, :resource_path
     helper_method :resource, :resources, :singular_name
+
     add_flash_types :success
 
     def index
       instance_variable_set("@#{controller_name}", resources.page(params[:page]))
     end
 
-    def new
-      @title_parts << translate('new_resource')
-    end
+    def new; end
 
     def create
-      @title_parts << translate('new_resource')
       if resource.save
         redirect_to resources_path, success: translate('flash.create_success')
       else
@@ -22,17 +20,34 @@ module Admin
       end
     end
 
-    def edit
-      @title_parts << translate('edit_resource', resource_id: resource.id)
-    end
+    def edit; end
 
     def update
-      @title_parts << translate('edit_resource', resource_id: resource.id)
-      if resource.update(resource_params)
+      if resource.update_attributes(resource_params)
         redirect_to resources_path, success: translate('flash.update_success')
       else
         render :edit
       end
+    end
+
+    def reorder
+      items = resources.all.index_by(&:id)
+      inx = 0
+      
+      if params[:items].present?
+        params[:items].values.each do |item|
+          if item2 = items[item['id'].to_i]
+            item2.position = (inx += 1)
+          end
+        end
+      end
+
+      if items.any?
+        items.values.first.class.transaction do
+          items.values.map { |item| item.changed? && item.save!(validate: false) }
+        end
+      end
+      head :ok
     end
 
     def destroy
@@ -40,7 +55,7 @@ module Admin
       redirect_to resources_path
     end
 
-    private
+    private 
 
     def resource
       instance_variable_get("@#{controller_name.singularize}")
@@ -52,6 +67,10 @@ module Admin
 
     def singular_name
       resource_name.gsub('/', '_').singularize
+    end
+
+    def resource_name
+      controller_path.sub(/^admin\//, '')
     end
 
     def resource_prefix
@@ -76,6 +95,10 @@ module Admin
 
     def resource_params
       params.require(singular_name).permit(permitted_params)
+    end
+
+    def translate(key, options = {})
+      t("resource.#{resource_name.gsub('/', '_').singularize}.#{key}", options)
     end
   end
 end
