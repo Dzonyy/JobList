@@ -2,9 +2,6 @@
 %html
   %head
     = render 'shared/head', css_file: 'login', js_file: false
-  %body#login_page
-    .login_page--wrapper
-      .login_page--panel
-        -# .login_page--panel_logo= image_tag('logo.png', class: 'main_logo', alt: 'main logo')
-        .login_page--box
-          = yield
+  %body
+    .login_wrapper
+      = yield
