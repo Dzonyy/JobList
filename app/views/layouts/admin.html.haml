@@ -3,15 +3,16 @@
   %head
     = render 'shared/head', css_file: 'admin', js_file: 'admin'
   %body
-    %nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
+    %nav.navbar.navbar-dark.fixed-top.bg-primary.flex-md-nowrap.p-0.shadow
       = link_to('JobList', '', class: 'navbar-brand col-sm-3 col-md-2 mr-0')
       %ul.navbar-nav.px-3
         %li.nav-item.text-nowrap
           = link_to('', '', class:'nav-link')
       .container-fluid
         .row
-          %nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+          %nav.col-3.d-none.d-md-block.bg-primary.sidebar
             .sidebar-sticky
               .nav.flex-column
-    %main.content_container
+              %p yooo
+    %main.container.offset-3
       = yield
