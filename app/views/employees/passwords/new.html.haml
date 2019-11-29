@@ -1,12 +1,12 @@
 .container-fluid.h-100
-  .row.h-100
-    .col.align-self-center.justify-content-center
-      %h2 Zapomniałeś hasła?
-    .col.align-self-center.justify-content-center
-      = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'esplori-form' }) do |f|
+  .row.h-100.align-items
+    .align-self-center.text-center.bg-primary.h-100.d-flex.flex-column.justify-content-center.col-6
+      %h1.display-2.text-white Zapomniałeś hasła?
+    .col.align-self-center
+      = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'employee_form col-6 mx-auto' }) do |f|
         .form-inputs
           = f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" }
-        .form-actions
-          = f.button(:submit, t('helpers.submit.customer.change_password'))
-
-      = link_to 'Logowanie', new_session_path(resource_name)
+        .form-actions.text-center.mb-3
+          = f.button(:submit, t('helpers.submit.customer.change_password'), class: 'btn btn-success')
+      .text-center
+        = link_to 'Logowanie', new_session_path(resource_name)
