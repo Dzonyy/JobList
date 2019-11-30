@@ -3,16 +3,15 @@
   %head
     = render 'shared/head', css_file: 'admin', js_file: 'admin'
   %body
-    %nav.navbar.navbar-dark.fixed-top.bg-primary.flex-md-nowrap.p-0.shadow
-      = link_to('JobList', '', class: 'navbar-brand col-sm-3 col-md-2 mr-0')
-      %ul.navbar-nav.px-3
-        %li.nav-item.text-nowrap
-          = link_to('', '', class:'nav-link')
-      .container-fluid
-        .row
-          %nav.col-3.d-none.d-md-block.bg-primary.sidebar
-            .sidebar-sticky
-              .nav.flex-column
-              %p yooo
-    %main.container.offset-3
-      = yield
+    .row
+      .col-3.bg-primary
+        .navbar-brand
+          = link_to('JobList', '', class: 'text-white')
+        #v-pills-tab.nav.flex-column.nav-pills.text-white{"aria-orientation" => "vertical", :role => "tablist"}
+          %a#v-pills-home-tab.nav-link.active{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home", :role => "tab"} Home
+          %a#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-profile", :role => "tab"} Profile
+          %a#v-pills-messages-tab.nav-link{"aria-controls" => "v-pills-messages", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-messages", :role => "tab"} Messages
+          %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings", :role => "tab"} Settings
+      .col-9.pt-5
+        %main
+          = yield
