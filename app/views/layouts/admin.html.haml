@@ -3,15 +3,16 @@
   %head
     = render 'shared/head', css_file: 'admin', js_file: 'admin'
   %body
-    .row
-      .col-3.bg-primary
+    .row.h-100
+      .col-2.bg-primary.mr-5.h-100
         .navbar-brand
           = link_to('JobList', '', class: 'text-white')
         #v-pills-tab.nav.flex-column.nav-pills.text-white{"aria-orientation" => "vertical", :role => "tablist"}
-          %a#v-pills-home-tab.nav-link.active{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-home", :role => "tab"} Home
-          %a#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-profile", :role => "tab"} Profile
-          %a#v-pills-messages-tab.nav-link{"aria-controls" => "v-pills-messages", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-messages", :role => "tab"} Messages
-          %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings", :role => "tab"} Settings
-      .col-9.pt-5
+          %a#v-pills-employees-tab.nav-link.text-white{"aria-controls" => "v-pills-employees", "aria-selected" => "true", "data-toggle" => "pill", :href => "#v-pills-employees-tab", :role => "tab"} Employees
+          %a#v-pills-users-tab.nav-link.text-white{"aria-controls" => "v-pills-users", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-users", :role => "tab"} Users
+          %a#v-pills-technologies-tab.nav-link.text-white{"aria-controls" => "v-pills-technologies", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-technologies", :role => "tab"} Technologies
+          %a#v-pills-categories-tab.nav-link.text-white{"aria-controls" => "v-pills-categories", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-categories", :role => "tab"} Categories
+          %a#v-pills-jobs-tab.nav-link.text-white{"aria-controls" => "v-pills-jobs", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-jobs", :role => "tab"} Jobs
+      .col-8.pt-5
         %main
           = yield
