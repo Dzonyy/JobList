@@ -1,5 +1,5 @@
 module Admin
-  class JobsController < ResourceController
+  class CategoriesController < ResourceController
     load_and_authorize_resource
 
     private

@@ -1,1 +1,11 @@
-%p yoo
+%table.table.table-bordered
+  %thead.table-primary
+    %tr
+      %th.col-11= admin_label('email')
+      %th.col-1= t('simple_form.labels.actions')
+  %tbody
+    - resources.each do |resource|
+      %tr{ data: { id: resource.id } }
+        %td= resource.email
+        %td.col-1
+          = render partial: 'list_actions', locals: { resource: resource }
