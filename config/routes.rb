@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     resources :jobs, except: :show
     resources :employees, except: :show
     resources :users, except: :show
+    resources :technologies, except: :show
+    resources :categories, except: :show
   end
 end
