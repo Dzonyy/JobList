@@ -12,19 +12,19 @@
             %li
               = active_link_to(admin_employees_path) do
                 Pracownicy
-          - if can?(:read, Users)
+          - if can?(:read, User)
             %li
               = active_link_to(admin_users_path) do
                 Użytkownicy
-          - if can?(:read, Jobs)
+          - if can?(:read, Job)
             %li
               = active_link_to(admin_jobs_path) do
                 Oferty pracy
-          - if can?(:read, Technologies)
+          - if can?(:read, Technologie)
             %li
               = active_link_to(admin_technologies_path) do
                 Technologie
-          - if can?(:read, Categories)
+          - if can?(:read, Categorie)
             %li
               = active_link_to(admin_categories_path) do
                 Kategorie
