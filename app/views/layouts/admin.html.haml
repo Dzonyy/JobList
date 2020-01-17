@@ -20,11 +20,11 @@
             %li
               = active_link_to(admin_jobs_path) do
                 Oferty pracy
-          - if can?(:read, Technologie)
+          - if can?(:read, Technology)
             %li
               = active_link_to(admin_technologies_path) do
                 Technologie
-          - if can?(:read, Categorie)
+          - if can?(:read, Category)
             %li
               = active_link_to(admin_categories_path) do
                 Kategorie

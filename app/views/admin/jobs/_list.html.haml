@@ -6,6 +6,6 @@
   %tbody
     - resources.each do |resource|
       %tr{ data: { id: resource.id } }
-        %td= resource.title
+        %td= resource.name
         %td.actions.col-300
           = render partial: 'list_actions', locals: { resource: resource }
