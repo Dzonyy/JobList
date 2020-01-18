@@ -4,6 +4,7 @@
       %legend Podstawowe dane
 
       = f.input :name
+      = f.association :category, as: :select
 
   .form-actions
     = f.button :submit

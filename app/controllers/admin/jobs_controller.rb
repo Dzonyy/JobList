@@ -5,7 +5,7 @@ module Admin
     private
 
     def permitted_params
-      %i[name]
+      %i[name category_id]
     end
   end
 end
