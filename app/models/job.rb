@@ -1,4 +1,4 @@
 class Job < ApplicationRecord
   belongs_to :category
-  # has_many :technologies
+  has_and_belongs_to_many :technologies
 end
