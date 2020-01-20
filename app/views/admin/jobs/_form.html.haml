@@ -5,7 +5,9 @@
 
       = f.input :name
       = f.association :category, as: :select
-      = f.association :technologies, as: :select
-
+      = f.simple_fields_for(:technology) do |c|
+        = c.input :technology_id, as: :select, collection: Technology.all
+        = c.input :rating
+        = c.button :submit
   .form-actions
     = f.button :submit
