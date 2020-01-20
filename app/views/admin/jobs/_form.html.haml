@@ -5,7 +5,7 @@
 
       = f.input :name
       = f.association :category, as: :select
-      = f.association :technologies, as: :select, collection: Technology.all.sort
+      = f.association :technologies, as: :select
 
   .form-actions
     = f.button :submit
