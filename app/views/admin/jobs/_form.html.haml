@@ -5,9 +5,13 @@
 
       = f.input :name
       = f.association :category, as: :select
-      = f.simple_fields_for(:technology) do |c|
-        = c.input :technology_id, as: :select, collection: Technology.all
-        = c.input :rating
-        = c.button :submit
+    %fieldset
+      %legend Technologie
+      = f.simple_fields_for(:technologies) do |technology|
+        = render 'technology_fields', f: technology
+      .links
+        = link_to_add_association 'Dodaj sekcje', f, :technologies, class: 'btn btn-primary btn-sm'
+
+
   .form-actions
     = f.button :submit
