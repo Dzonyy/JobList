@@ -1,0 +1,9 @@
+.table_actions
+  -# = fa_icon "bars", class: 'table_actions--burger'
+  .table_actions--links
+    - if edit_resource_path(resource.id).present? && can?(:edit, resource)
+      = link_to edit_resource_path(resource.id), class: 'btn btn-sm btn-green btn-edit' do
+        Edytuj
+    - if can?(:destroy, resource) && resource.can_delete?
+      = link_to resource_path(resource.id), method: :delete, data: {confirm: t(:are_you_sure_to_destroy) }, class: 'btn btn-sm btn-red btn-destroy' do
+        Usuń
