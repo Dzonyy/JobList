@@ -72,3 +72,4 @@ gem 'active_storage_validations'
 gem 'email_validator'
 
 gem 'meta-tags'
+gem "cocoon"

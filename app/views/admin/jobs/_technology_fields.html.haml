@@ -1,8 +1,6 @@
-  -# = f.input :technology_id, as: :select, collection: Technology.all
-  -# = f.input :rating
-  -# = f.button :submit
 .nested-fields
   .nested-fields_inputs
+    = f.input :technology_id, as: :select, collection: Technology.all
     = f.input :name
     = f.input :rating
   .nested-fields_nav
