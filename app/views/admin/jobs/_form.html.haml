@@ -7,10 +7,10 @@
       = f.association :category, as: :select
     %fieldset
       %legend Technologie
-      = f.simple_fields_for(:jobs_technologies) do |t|
+      = f.simple_fields_for(:job_technologies) do |t|
         = render 'technology_fields', f: t
       .links
-        = link_to_add_association 'Dodaj sekcje', f, class: 'btn btn-primary btn-sm'
+        = link_to_add_association 'Dodaj sekcje', f, :job_technologies, class: 'btn btn-primary btn-sm'
 
 
   .form-actions

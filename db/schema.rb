@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_191943) do
+ActiveRecord::Schema.define(version: 2020_01_23_182520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 2020_01_20_191943) do
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
   end
 
+  create_table "job_technologies", id: false, force: :cascade do |t|
+    t.bigint "job_id", null: false
+    t.bigint "technology_id", null: false
+    t.integer "rating"
+    t.index ["job_id", "technology_id"], name: "index_job_technologies_on_job_id_and_technology_id"
+    t.index ["technology_id", "job_id"], name: "index_job_technologies_on_technology_id_and_job_id"
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -48,12 +56,6 @@ ActiveRecord::Schema.define(version: 2020_01_20_191943) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.index ["category_id"], name: "index_jobs_on_category_id"
-  end
-
-  create_table "jobs_technologies", id: false, force: :cascade do |t|
-    t.bigint "job_id", null: false
-    t.bigint "technology_id", null: false
-    t.integer "rating"
   end
 
   create_table "technologies", force: :cascade do |t|
