@@ -3,31 +3,35 @@
   %head
     = render 'shared/head', css_file: 'admin', js_file: 'admin'
   %body
-    .row.h-100
-      .col-2.bg-primary.mr-5.h-100
-        .navbar-brand
-          = link_to('JobList', '', class: 'text-white')
-        %ul
-          - if can?(:read, Employee)
-            %li
-              = active_link_to(admin_employees_path) do
-                Pracownicy
-          - if can?(:read, User)
-            %li
-              = active_link_to(admin_users_path) do
-                Użytkownicy
-          - if can?(:read, Job)
-            %li
-              = active_link_to(admin_jobs_path) do
-                Oferty pracy
-          - if can?(:read, Technology)
-            %li
-              = active_link_to(admin_technologies_path) do
-                Technologie
-          - if can?(:read, Category)
-            %li
-              = active_link_to(admin_categories_path) do
-                Kategorie
-      .col-8.pt-5
-        %main
-          = yield
+    .navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
+      = link_to('JobList', root_path, class: 'navbar-brand col-sm-3 col-md-2 mr-0')
+      %input.form-control.form-control-dark.w-100{type: 'text', placeholder: 'Search'}
+      %ul.navbar-nav.px-3
+    .container-fluid
+      .row
+        %nav.col-md-2.d-none.d-md-block.bg-primary.sidebar
+          .sidebar-sticky
+            %ul.nav.flex-column
+              - if can?(:read, Employee)
+                %li.nav-item
+                  = active_link_to(admin_employees_path, class: 'nav-link') do
+                    Pracownicy
+              - if can?(:read, User)
+                %li.nav-item
+                  = active_link_to(admin_users_path, class: 'nav-link') do
+                    Użytkownicy
+              - if can?(:read, Job)
+                %li.nav-item
+                  = active_link_to(admin_jobs_path, class: 'nav-link') do
+                    Oferty pracy
+              - if can?(:read, Technology)
+                %li.nav-item
+                  = active_link_to(admin_technologies_path, class: 'nav-link') do
+                    Technologie
+              - if can?(:read, Category)
+                %li.nav-item
+                  = active_link_to(admin_categories_path, class: 'nav-link') do
+                    Kategorie
+        .col-8.pt-5
+          %main
+            = yield
