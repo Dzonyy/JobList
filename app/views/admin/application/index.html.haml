@@ -2,11 +2,10 @@
   title(t("resource.#{singular_name}.resources_list"))
 
 
-.row.mb-3.align-items-center.justify-content-between
+.row.my-5.pt-5.align-items-center.justify-content-between
   .col
-    = t("resource.#{singular_name}.name")
-  .col
-    = render 'admin_buttons'
+    %h1.h2= t("resource.#{singular_name}.name")
+  = render 'admin_buttons'
 
 = render 'flash'
 

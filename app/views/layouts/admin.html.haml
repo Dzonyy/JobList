@@ -32,6 +32,5 @@
                 %li.nav-item
                   = active_link_to(admin_categories_path, class: 'nav-link') do
                     Kategorie
-        .col-8.pt-5
-          %main
-            = yield
+        %main.col-md-9.ml-sm-auto.col-lg-10.px-4
+          = yield

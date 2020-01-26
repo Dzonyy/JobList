@@ -1,11 +1,11 @@
-%table.table.table-hover.table-bordered.table_box
+%table.table.table-hover.table-bordered.table_box.table-responsive-md
   %thead
-    %tr
-      %th= admin_label('title')
-      %th.col-300.actions= t('simple_form.labels.actions')
+    %tr.d-flex
+      %th.col-10= admin_label('title')
+      %th.col-2.actions= t('simple_form.labels.actions')
   %tbody
     - resources.each do |resource|
-      %tr{ data: { id: resource.id } }
-        %td= resource.name
-        %td.actions.col-300
+      %tr.d-flex{ data: { id: resource.id } }
+        %td.col-10= resource.name
+        %td.col-2.actions
           = render partial: 'list_actions', locals: { resource: resource }
