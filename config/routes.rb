@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :users, except: :show
     resources :technologies, except: :show
     resources :categories, except: :show
+    resources :benefits, except: :show
   end
 end
