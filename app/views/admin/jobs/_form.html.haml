@@ -1,17 +1,17 @@
 = simple_form_for([:admin, resource], url: resource.persisted? ? resource_path(resource.id) : resources_path, html: { class: 'form-horizontal', id: admin_form_id }) do |f|
-  .form-inputs
+  .form-inputs.pt-5
     %fieldset
-      %legend Podstawowe dane
+      %legend.h2.h2 Podstawowe dane
 
       = f.input :name
       = f.association :category, as: :select
     %fieldset
-      %legend Technologie
+      %legend.h2 Technologie
       = f.simple_fields_for(:job_technologies) do |t|
         = render 'technology_fields', f: t
       .links
-        = link_to_add_association 'Dodaj sekcje', f, :job_technologies, class: 'btn btn-primary btn-sm'
+        = link_to_add_association 'Dodaj sekcje', f, :job_technologies, class: 'btn btn-success'
 
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: 'btn btn-success'
