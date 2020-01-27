@@ -4,5 +4,12 @@
   .col
     %h1 Home#index
     %p Find me in app/views/home/index.html.haml
-    - @layout_jobs.each do |job|
-      = job.name
+    -# - @layout_jobs.each do |job|
+    -#   = job.name
+    - @layout_jobs.group_by(&:category).each do |category, jobs|
+      %li
+        = category.name
+        %ul
+          - jobs.each do |job|
+            %li
+              = job.name
