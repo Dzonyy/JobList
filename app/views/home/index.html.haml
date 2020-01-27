@@ -1,4 +1,8 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
-- @layout_jobs.each do |job|
-  = job.name
+.wrapper.home_container
+  .col
+    #map
+  .col
+    %h1 Home#index
+    %p Find me in app/views/home/index.html.haml
+    - @layout_jobs.each do |job|
+      = job.name
