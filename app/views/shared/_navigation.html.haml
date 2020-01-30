@@ -1,15 +1,17 @@
-%nav.navbar.navbar-light.bg-light
-  = link_to('JobList', root_path, class: 'navbar-brand')
-  %button.navbar-toggler{"aria-controls": "navbarNav", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-target": "#navbarNav", "data-toggle": "collapse", type: "button"}
-    %span.navbar-toggler-icon
-  #navbarNav.collapse.navbar-collapse
-    %ul.navbar-nav
-      - if current_user
-        %li.nav-item
-          %p= current_user.id
-          = link_to('Log Out', logout_path)
-      - else
-        %li.nav-item.active
-          = link_to('Log In' , new_user_session_path, class: 'nav-link')
-        %li.nav-item
-          = link_to('Sign In' , new_user_password_path, class: 'nav-link')
+%nav.site-header.sticky-top.py-2.bg-primary
+  %ul.container.d-flex.flex-column.flex-md-row.justify-content-between.list-unstyled.align-center
+    %li
+      = link_to('JobList', root_path, class: 'py-3 d-none d-md-inline-block')
+    %li
+      = link_to('Categories', root_path, class: 'py-3 d-none d-md-inline-block')
+    - if current_user
+      %li
+        %p= current_user.id
+        = link_to('Log Out', logout_path, class: 'py-3 d-none d-md-inline-block')
+    - else
+      %li
+        = link_to('Log In' , new_user_session_path, class: 'py-3 d-none d-md-inline-block')
+      %li
+        = link_to('Sign In' , new_user_password_path, class: 'py-3 d-none d-md-inline-block')
+    %li
+      = link_to('Categories', root_path, class: 'py-3 d-none d-md-inline-block')
