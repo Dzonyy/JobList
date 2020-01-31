@@ -1,17 +1,18 @@
-%nav.site-header.sticky-top.py-2.bg-primary
-  %ul.container.d-flex.flex-column.flex-md-row.justify-content-between.list-unstyled.align-center
+%nav.position-fixed.w-100.py-2.bg-primary.main_nav
+  %ul.container.d-flex.flex-column.flex-md-row.justify-content-between.list-unstyled.align-items-center.my-0
     %li
-      = link_to('JobList', root_path, class: 'py-3 d-none d-md-inline-block')
+      = link_to('JobList', root_path, class: 'py-3 d-none d-md-inline-block text-white h2')
     %li
-      = link_to('Categories', root_path, class: 'py-3 d-none d-md-inline-block')
+      = link_to('Categories', root_path, class: 'py-3 d-none d-md-inline-block text-white')
+    %li
+      = link_to('Pricing', root_path, class: 'py-3 d-none d-md-inline-block text-white')
     - if current_user
       %li
         %p= current_user.id
-        = link_to('Log Out', logout_path, class: 'py-3 d-none d-md-inline-block')
+        = link_to('Log Out', logout_path, class: 'py-3 d-none d-md-inline-block text-white')
     - else
       %li
-        = link_to('Log In' , new_user_session_path, class: 'py-3 d-none d-md-inline-block')
+        = link_to('Log In' , new_user_session_path, class: 'py-3 d-none d-md-inline-block text-white')
       %li
-        = link_to('Sign In' , new_user_password_path, class: 'py-3 d-none d-md-inline-block')
-    %li
-      = link_to('Categories', root_path, class: 'py-3 d-none d-md-inline-block')
+        = link_to('Sign In' , new_user_password_path, class: 'py-3 d-none d-md-inline-block text-white')
+.py-5
