@@ -73,3 +73,4 @@ gem 'email_validator'
 
 gem 'meta-tags'
 gem "cocoon"
+gem 'geocoder'
