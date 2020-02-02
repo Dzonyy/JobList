@@ -4,14 +4,24 @@
       %legend.h2.h2 Podstawowe dane
 
       = f.input :name
+      = f.input :description
+      .row
+        = f.input :salary_from
+        = f.input :salary_to
+      = f.input :experience
+      = f.input :company_name
+      = f.input :address
+      = f.input :company_city
+
       = f.association :category, as: :select
+      = f.association :pricing, as: :select
     %fieldset
       %legend.h2 Technologie
-      = f.simple_fields_for(:job_technologies) do |t|
-        = render 'technology_fields', f: t
+      = f.simple_fields_for(:job_technologies) do |job_technology|
+        = render 'job_technology_fields', f: job_technology
       .links
         = link_to_add_association 'Dodaj sekcje', f, :job_technologies, class: 'btn btn-success'
 
 
-  .form-actions
+  .form-actions.mt-5
     = f.button :submit, class: 'btn btn-success'
