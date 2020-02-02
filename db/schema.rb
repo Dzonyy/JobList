@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_27_174844) do
+ActiveRecord::Schema.define(version: 2020_02_02_092258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,8 +54,6 @@ ActiveRecord::Schema.define(version: 2020_01_27_174844) do
     t.string "salary_to"
     t.string "experience"
     t.string "company_name"
-    t.string "company_address1"
-    t.string "company_address2"
     t.string "company_city"
     t.string "company_phone_number"
     t.datetime "created_at", null: false
@@ -64,7 +62,17 @@ ActiveRecord::Schema.define(version: 2020_01_27_174844) do
     t.text "address"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "pricing_id"
     t.index ["category_id"], name: "index_jobs_on_category_id"
+    t.index ["pricing_id"], name: "index_jobs_on_pricing_id"
+  end
+
+  create_table "pricings", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "technologies", force: :cascade do |t|
@@ -87,4 +95,5 @@ ActiveRecord::Schema.define(version: 2020_01_27_174844) do
   end
 
   add_foreign_key "jobs", "categories"
+  add_foreign_key "jobs", "pricings"
 end
