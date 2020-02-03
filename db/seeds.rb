@@ -8,3 +8,7 @@
 
 Employee.delete_all
 Employee.create(email: 'admin@example.com', password: '123qwe123', first_name: 'Admin', last_name: 'Admin')
+
+Category.create(name: 'Frontend')
+Category.create(name: 'Backend')
+Category.create(name: 'DevOps')
