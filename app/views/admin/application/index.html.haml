@@ -2,15 +2,14 @@
   title(t("resource.#{singular_name}.resources_list"))
 
 
-.admin-nav
-  .admin-nav-left
-  .admin-nav-right
-    = render 'admin_buttons'
+.row.my-5.pt-5.align-items-center.justify-content-between
+  .col
+    %h1.h2= t("resource.#{singular_name}.name")
+  = render 'admin_buttons'
 
 = render 'flash'
 
 .widget
-  .widget-header= t("resource.#{singular_name}.name")
   .widget-body
     = render 'list'
 - if resources.respond_to?(:total_pages)

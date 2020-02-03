@@ -1,0 +1,11 @@
+= simple_form_for([:admin, resource], url: resource.persisted? ? resource_path(resource.id) : resources_path, html: { class: 'form-horizontal', id: admin_form_id }) do |f|
+  .form-inputs.pt-5
+    %fieldset
+      %legend.h2 Podstawowe dane
+
+      = f.input :name
+      = f.input :price
+      = f.input :description
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-success'

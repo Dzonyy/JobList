@@ -1,2 +1,11 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.wrapper.container-fluid.mt-5
+  .row
+    .col.col-6
+      #map
+    .col.col-6
+      - @layout_jobs.group_by(&:category).each do |category, jobs|
+        %h3= category.name
+        %ul.list-unstyled
+          - jobs.each do |job|
+            %li
+              = render job, locals: {job: job}
