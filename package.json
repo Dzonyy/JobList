@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "jquery-ujs": "^1.2.2"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",

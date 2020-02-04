@@ -2,6 +2,9 @@ class Job < ApplicationRecord
   belongs_to :category
   belongs_to :pricing
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   has_one_attached :company_logo
 
   has_many :job_technologies
