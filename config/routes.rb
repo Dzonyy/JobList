@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  get 'job/:slug', to: 'jobs#show', as: :job
+
   namespace :admin do
     root to: "jobs#index"
     resources :jobs, except: :show
