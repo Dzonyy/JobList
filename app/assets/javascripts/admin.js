@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ujs
 //= require cocoon
 //= require activestorage
 //= require_self

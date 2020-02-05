@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: "jobs#index"
+
     resources :jobs, except: :show
     resources :employees, except: :show
     resources :users, except: :show

@@ -5,7 +5,7 @@ module Admin
     private
 
     def permitted_params
-      %i[name category_id pricing_id salary_from salary_to experience company_name company_city address] +
+      %i[name category_id pricing_id salary_from salary_to experience company_name company_city address slug] +
         [job_technologies: %i[name rating]]
     end
   end

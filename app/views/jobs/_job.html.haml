@@ -6,7 +6,7 @@
           = image_tag(job.company_logo, alt: job.company_name)
       .col
         .row
-          = link_to(job.name, '', class: 'card-title')
+          = link_to(job.name, job_path(job.slug), class: 'card-title')
           .box
             %span
               = job.salary_from

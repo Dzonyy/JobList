@@ -1,5 +1,5 @@
 class Pricing < ApplicationRecord
-  belongs_to :job, optional: true
+  has_many :jobs, dependent: :restrict_with_exception
 
   validates :name, presence: true
   validates :price, presence: true
