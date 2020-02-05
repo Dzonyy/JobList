@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'job/:slug', to: 'jobs#show', as: :job
 
+  get 'pricing', to: 'pricings#index', as: :pricing
+
   namespace :admin do
     root to: "jobs#index"
 

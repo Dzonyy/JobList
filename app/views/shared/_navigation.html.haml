@@ -5,7 +5,7 @@
     %li
       = link_to('Categories', root_path, class: 'py-3 d-none d-md-inline-block text-white')
     %li
-      = link_to('Pricing', root_path, class: 'py-3 d-none d-md-inline-block text-white')
+      = link_to('Pricing', pricing_path, class: 'py-3 d-none d-md-inline-block text-white')
     - if current_user
       %li
         %p= current_user.id
