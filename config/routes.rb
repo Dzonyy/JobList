@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  # get 'job/:slug', to: 'jobs#show', as: :job
   get "job/:slug", to: "jobs#job_modal", as: :job_modal
 
   get "pricing", to: "pricings#index", as: :pricing

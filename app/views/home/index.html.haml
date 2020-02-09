@@ -9,3 +9,6 @@
           - jobs.each do |job|
             %li
               = render job, locals: {job: job}
+#modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
+  .modal-dialog{:role => "document"}
+    .modal-content
