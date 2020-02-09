@@ -17,7 +17,7 @@
 //= require popper
 //= require bootstrap
 //= require cocoon
-//= require_tree .
+//= require_tree ./page/
 
 
 $(function() {
