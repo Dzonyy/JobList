@@ -22,6 +22,10 @@ class Job < ApplicationRecord
   validates :company_city, presence: true
 
   accepts_nested_attributes_for :job_technologies
-  geocoded_by :address
-  after_validation :geocode
+  geocoded_by :full_address
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+
+  def full_address
+    [address,company_city].compact.join(',')
+  end
 end
