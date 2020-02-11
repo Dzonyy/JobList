@@ -9,7 +9,8 @@ $(function() {
     $(jobs).each(function (inx) {
       const lat = $(this).data('latitude');
       const lng = $(this).data('longitude');
-      const `marker${inx}`] = new google.maps.Marker({lat: lat , lng: lng , map: map});
+      new google.maps.Marker({lat: lat , lng: lng , map: map});
+      console.log(new google.maps.Marker({lat: lat , lng: lng , map: map}));
     });
   }
 
