@@ -8,7 +8,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %link{href: "https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap&subset=latin-ext", rel: "stylesheet"}
-    %script{:defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyD_7duEwKQoo6Xx08UJxHnsPIr6ounp1cw&libraries=places", :type => "text/javascript"}
+    %link{:href => "https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css", :rel => "stylesheet"}
   %body
     = render 'shared/navigation'
     -# %p{id: "”notice”"}= notice
