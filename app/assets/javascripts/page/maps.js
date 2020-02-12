@@ -1,21 +1,16 @@
-$(function() {
+$(function () {
+  const mymap = L.map('map').setView([51.9194, 19.1451], 6);
+  const markers = document.querySelectorAll('.home_jobs--list li a')
 
-  function initMap() {
-    const PL = {lat: 51.194874549999994, lng: 16.18512277614075};
-    const map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 7, center: PL});
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    accessToken: 'pk.eyJ1IjoiZHpvbnl5IiwiYSI6ImNrNmpqbjl2eTAxN2wzcnAydjg1YWFrZTcifQ.U7RiWpiS-R9GB02A4zkbDw'
+  }).addTo(mymap);
 
-    let jobs = document.querySelectorAll('.home_jobs--list a')
-    $(jobs).each(function (inx) {
-      const lat = $(this).data('latitude');
-      const lng = $(this).data('longitude');
-      new google.maps.Marker({lat: lat , lng: lng , map: map});
-      console.log(new google.maps.Marker({lat: lat , lng: lng , map: map}));
-    });
-  }
-
-  if ($('#map').length > 0) {
-    initMap();
-  }
+  console.log(markers);
+  // var marker = L.marker([51.5, -0.09]).addTo(mymap);
+  markers.forEach(marker => znak = new L.marker([marker.getAttribute('data-latitude'), marker.getAttribute('data-longitude')]).addTo(mymap))
 
 });

@@ -17,6 +17,7 @@
 //= require popper
 //= require bootstrap
 //= require cocoon
+//= require leaflet
 //= require_tree ./page/
 
 
