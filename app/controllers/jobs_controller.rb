@@ -10,4 +10,8 @@ class JobsController < ApplicationController
       format.js
     end
   end
+
+  def new
+    @job = Job.new
+  end
 end

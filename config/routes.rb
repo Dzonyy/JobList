@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "job/:slug", to: "jobs#job_modal", as: :job_modal
+  get 'jobs/new', to: 'jobs#new', as: :new_job
 
   get "pricing", to: "pricings#index", as: :pricing
 

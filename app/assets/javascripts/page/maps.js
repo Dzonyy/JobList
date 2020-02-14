@@ -9,8 +9,7 @@ $(function () {
     accessToken: 'pk.eyJ1IjoiZHpvbnl5IiwiYSI6ImNrNmpqbjl2eTAxN2wzcnAydjg1YWFrZTcifQ.U7RiWpiS-R9GB02A4zkbDw'
   }).addTo(mymap);
 
-  console.log(markers);
-  // var marker = L.marker([51.5, -0.09]).addTo(mymap);
-  markers.forEach(marker => znak = new L.marker([marker.getAttribute('data-latitude'), marker.getAttribute('data-longitude')]).addTo(mymap))
-
+  markers.forEach(marker => {
+    marker = new L.marker([marker.getAttribute('data-latitude'), marker.getAttribute('data-longitude')]).addTo(mymap);
+  })
 });
