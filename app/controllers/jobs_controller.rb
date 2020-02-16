@@ -3,6 +3,10 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
+  def new
+    @job = Job.new
+  end
+
   def job_modal
     @job = Job.friendly.find(params[:slug])
     respond_to do |format|
@@ -11,7 +15,11 @@ class JobsController < ApplicationController
     end
   end
 
-  def new
-    @job = Job.new
+  private
+
+  def job_params
+    params.require(:job).permit(
+      %i[name]
+    )
   end
 end
