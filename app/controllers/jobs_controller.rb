@@ -7,6 +7,9 @@ class JobsController < ApplicationController
     @job = Job.new
   end
 
+  def create
+  end
+
   def job_modal
     @job = Job.friendly.find(params[:slug])
     respond_to do |format|

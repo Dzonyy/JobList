@@ -1,2 +1,16 @@
-= simple_form_for(@job, html: { method: :post, class: 'card w-50' }) do |f|
-  = f.input :name
+= simple_form_for(@job, url: create_job_path, html: { method: :post, class: 'w-50' }) do |f|
+  .form-inputs.pa-5
+    %fieldset
+      %legend.h2
+      = f.input :name
+      = f.input :description
+      .row
+        = f.input :salary_from
+        = f.input :salary_to
+      .row
+        = f.association :category, as: :select
+        = f.association :pricing, as: :select
+      = f.input :experience
+      = f.input :company_name
+      = f.input :address
+      = f.input :company_city
