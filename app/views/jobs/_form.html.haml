@@ -1,16 +1,19 @@
 = simple_form_for(@job, url: create_job_path, html: { method: :post, class: 'w-50' }) do |f|
   .form-inputs.pa-5
     %fieldset
-      %legend.h2
+      %legend.h4 Podstawowe informacje
       = f.input :name
       = f.input :description
-      .row
+      .d-flex
         = f.input :salary_from
         = f.input :salary_to
-      .row
+      .d-flex
         = f.association :category, as: :select
         = f.association :pricing, as: :select
+      %legend.h4 Dodatkowe informacje
       = f.input :experience
       = f.input :company_name
       = f.input :address
       = f.input :company_city
+  .form-action
+    = f.button :submit, class: 'btn btn-success'
