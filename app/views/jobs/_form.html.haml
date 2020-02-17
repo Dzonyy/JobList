@@ -1,19 +1,23 @@
-= simple_form_for(@job, url: create_job_path, html: { method: :post, class: 'w-50' }) do |f|
+= simple_form_for(@job, url: create_job_path, html: { method: :post, class: 'w-50 pb-5' }) do |f|
   .form-inputs.pa-5
     %fieldset
-      %legend.h4 Podstawowe informacje
-      = f.input :name
-      = f.input :description
-      .d-flex
-        = f.input :salary_from
-        = f.input :salary_to
-      .d-flex
-        = f.association :category, as: :select
-        = f.association :pricing, as: :select
-      %legend.h4 Dodatkowe informacje
-      = f.input :experience
-      = f.input :company_name
-      = f.input :address
-      = f.input :company_city
-  .form-action
+      .container
+        .row.bg-primary.px-3.py-3.my-3
+          %legend.text-white.h4 Podstawowe informacje
+        .row
+          = f.input :name
+          = f.input :description
+          = f.input :company_name, input_html: { class: 'col' }
+          = f.input :address, input_html: { class: 'col' }
+          = f.input :company_city, input_html: { class: 'col' }
+        .row
+          = f.input :salary_from
+          = f.input :salary_to
+        .row.bg-primary.px-3.py-3.my-3
+          %legend.text-white.h4 Dodatkowe informacje
+        .row
+          = f.association :category, as: :select, input_html: { class: 'col' }
+          = f.association :pricing, as: :select, input_html: { class: 'col' }
+          = f.input :experience, as: :select, collection: 1..10, input_html: { class: 'col' }
+  .form-action.text-right
     = f.button :submit, class: 'btn btn-success'
