@@ -1,4 +1,4 @@
-= link_to(job_modal_path(job.slug), {remote: true, data: { toggle: "modal", target: '#modal-window', latitude: job.latitude, longitude: job.longitude } } ) do
+= link_to(job_modal_path(job.slug), {remote: true, class: "marker-#{job.id}", data: { toggle: "modal", target: '#modal-window', latitude: job.latitude, longitude: job.longitude, id: job.id } } ) do
   .card.my-3
     .card-body
       .row
