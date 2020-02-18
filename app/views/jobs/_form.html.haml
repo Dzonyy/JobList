@@ -5,19 +5,32 @@
         .row.bg-primary.px-3.py-3.my-3
           %legend.text-white.h4 Podstawowe informacje
         .row
-          = f.input :name
-          = f.input :description
-          = f.input :company_name, input_html: { class: 'col' }
-          = f.input :address, input_html: { class: 'col' }
-          = f.input :company_city, input_html: { class: 'col' }
+          .col
+            = f.input :name
         .row
-          = f.input :salary_from
-          = f.input :salary_to
+          .col
+            = f.input :description
+        .row
+          .col
+            = f.input :company_name
+        .row
+          .col
+            = f.input :address
+          .col
+            = f.input :company_city
+        .row
+          .col
+            = f.input :salary_from
+          .col
+            = f.input :salary_to
         .row.bg-primary.px-3.py-3.my-3
           %legend.text-white.h4 Dodatkowe informacje
         .row
-          = f.association :category, as: :select, input_html: { class: 'col' }
-          = f.association :pricing, as: :select, input_html: { class: 'col' }
-          = f.input :experience, as: :select, collection: 1..10, input_html: { class: 'col' }
+          .col
+            = f.association :category, as: :select
+          .col
+            = f.association :pricing, as: :select
+          .col
+            = f.input :experience, as: :select, collection: 1..10
   .form-action.text-right
     = f.button :submit, class: 'btn btn-success'

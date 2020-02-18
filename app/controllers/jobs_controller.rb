@@ -5,6 +5,14 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
+    if @job.valid?
+      redirect_to preview_job_path
+    else
+      render "new"
+    end
+  end
+
+  def preview
   end
 
   def create
