@@ -2,16 +2,20 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :employees
 
-  root 'home#index'
+  root "home#index"
 
-  get 'jobs/:slug', to: 'jobs#job_modal', as: :job_modal
-  get '/new-job', to: 'jobs#new', as: :new_job
-  post '/new-job', to: 'jobs#create', as: :create_job
+  get "jobs/:slug", to: "jobs#job_modal", as: :job_modal
+  get "/new-job/step-1", to: "jobs#new", as: :new_job
+  post "/new-job", to: "jobs#create", as: :create_job
 
-  get 'pricing', to: 'pricings#index', as: :pricing
+  get "/new-job/preview", to: "jobs#preview", as: :job_preview
+  get "/new-job/job-payment", to: "jobs#payment", as: :job_pricing
+  get "/new-job/confirmation", to: "jobs#confirmation", as: :job_confirmation
+
+  get "pricing", to: "pricings#index", as: :pricing
 
   namespace :admin do
-    root to: 'jobs#index'
+    root to: "jobs#index"
 
     resources :jobs, except: :show
     resources :employees, except: :show
