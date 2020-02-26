@@ -8,7 +8,7 @@ class JobsController < ApplicationController
     if @job.valid?
       redirect_to preview_job_path
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -20,7 +20,7 @@ class JobsController < ApplicationController
     if @job.save
       redirect_to @job
     else
-      render "new"
+      render 'new'
     end
   end
 

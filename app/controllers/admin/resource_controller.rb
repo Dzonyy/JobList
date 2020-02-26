@@ -23,7 +23,7 @@ module Admin
     def edit; end
 
     def update
-      if resource.update_attributes(resource_params)
+      if resource.update(resource_params)
         redirect_to resources_path, success: translate('flash.update_success')
       else
         render :edit
@@ -33,7 +33,7 @@ module Admin
     def reorder
       items = resources.all.index_by(&:id)
       inx = 0
-      
+
       if params[:items].present?
         params[:items].values.each do |item|
           if item2 = items[item['id'].to_i]
@@ -55,7 +55,7 @@ module Admin
       redirect_to resources_path
     end
 
-    private 
+    private
 
     def resource
       instance_variable_get("@#{controller_name.singularize}")
@@ -70,7 +70,7 @@ module Admin
     end
 
     def resource_name
-      controller_path.sub(/^admin\//, '')
+      controller_path.sub(%r{^admin/}, '')
     end
 
     def resource_prefix
