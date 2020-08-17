@@ -1,34 +1,37 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
-  end
+    jobs = Job.all
 
-  def new
-    @job = Job.new
-    if @job.valid?
-      redirect_to preview_job_path
-    else
-      render "new"
-    end
-  end
-
-  def preview
+    render json: JobSerializer.new(jobs).serialized_json
   end
 
   def create
-    @job = Job.new(params[:job_params])
-    if @job.save
-      redirect_to @job
+    job = Job.new(job_params)
+
+    if job.save
+      render json: JobSerializer.new(job).serialized_json
     else
-      render "new"
+      render json: { error: job.errors.messages }, status: 422
     end
   end
 
-  def job_modal
-    @job = Job.friendly.find(params[:slug])
-    respond_to do |format|
-      format.html
-      format.js
+  def update
+    job = job.find_by(slug: params[:id])
+
+    if job.update(job_params)
+      render json: JobSerializer.new(job).serialized_json
+    else
+      render json: { error: job.errors.messages }, status: 422
+    end
+  end
+
+  def destroy
+    job = job.find_by(slug: params[:id])
+
+    if job.update(job_params)
+      head :no_content
+    else
+      render json: { error: job.errors.messages }, status: 422
     end
   end
 

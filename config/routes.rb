@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users
   devise_for :employees
 
@@ -8,7 +7,6 @@ Rails.application.routes.draw do
   get "jobs/:slug", to: "jobs#job_modal", as: :job_modal
   get "/new-job/step-1", to: "jobs#new", as: :new_job
   post "/new-job", to: "jobs#create", as: :create_job
-  get "/new-job/preview", to: "jobs#preview", as: :job_preview
   get "/new-job/job-payment", to: "jobs#payment", as: :job_pricing
   get "/new-job/confirmation", to: "jobs#confirmation", as: :job_confirmation
 
