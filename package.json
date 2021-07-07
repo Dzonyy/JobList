@@ -2,15 +2,16 @@
   "name": "joblist",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "jquery-ujs": "^1.2.2",
     "leaflet": "^1.6.0",
     "mapbox-gl": "^1.7.0",
-    "tinymce": "^5.1.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "tinymce": "^5.1.6"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -30,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/Dzonyy/JobList/issues"
   },
-  "homepage": "https://github.com/Dzonyy/JobList#readme"
+  "homepage": "https://github.com/Dzonyy/JobList#readme",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.2"
+  }
 }
