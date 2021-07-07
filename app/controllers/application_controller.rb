@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
       'application'
     end
   end
-  
+
   def query_param?
     params[:s].present?
   end
@@ -17,11 +17,11 @@ class ApplicationController < ActionController::Base
     "/%#{params[:s]}%"
   end
 
-  def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(_resource)
     my_account_path
   end
 
   def back_path(default = '/')
-    request.headers["X-XHR-Referer"] || request.referer || default
+    request.headers['X-XHR-Referer'] || request.referer || default
   end
 end
