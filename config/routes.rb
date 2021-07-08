@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :employees
 
-  root "home#index"
+  root "category#index"
 
   get "jobs/:slug", to: "jobs#job_modal", as: :job_modal
   get "/new-job/step-1", to: "jobs#new", as: :new_job

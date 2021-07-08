@@ -12,12 +12,6 @@ module ApplicationHelper
     end
   end
 
-  def admin_form_for(&block)
-    simple_form_for([:admin, resource], admin_form_attributes) do |f|
-      block.call(f)
-    end
-  end
-
   def admin_form_attributes
     {
       url: resource.persisted? ? resource_path(resource.id) : resources_path,

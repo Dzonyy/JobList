@@ -146,33 +146,7 @@ pl:
         role_list:
           administrator: Administrator
           office: Biuro
-  simple_form:
-    "yes": 'Tak'
-    "no": 'Nie'
-    hints:
-      product:
-        price: Cena brutto po jakiej sprzedawany będzie produkt
-        full_price: Cena brutto przed rabatem
-    labels:
-      actions: Operacje
-      back: Cofnij
-      q:
-        name_cont: Nazwa
-        ean_cont: EAN
-        category_id_eq: Kategoria
-        producer_id_eq: Producent
-        first_name_cont: Imię
-        last_name_cont: Nazwisko
-        email_cont: E-mail
-        company_name_cont: Nazwa firmy
-        nip_number_cont: Numer NIP
-        city_cont: Miasto
-        customer_cont: Klient
-        state_name_cont: Stan zamówienia
-        created_at_cont: Data utworzenia
-    required:
-      text: 'wymagane'
-      mark: '*'
+
   resource:
     setting:
       edit_resources: Edycja ustawień
@@ -184,7 +158,7 @@ pl:
       new_resource: Nowy artykuł
       resources_list: Lista artykułów
       edit_resource: Edycja artykułu
-      flash: 
+      flash:
         create_success: Nowy artykuł został utworzony
         update_success: Artykuł został zaktualizowany
         destroy_success: Artykuł został usunięty
@@ -193,7 +167,7 @@ pl:
       new_resource: Nowy klient
       resources_list: Lista klientów
       edit_resource: Edycja klienta
-      flash: 
+      flash:
         create_success: Nowy klient został utworzony
         update_success: Klient został zaktualizowany
         destroy_success: Klient został usunięty
@@ -202,7 +176,7 @@ pl:
       new_resource: Nowy produkt
       resources_list: Lista produktów
       edit_resource: Edycja produktu
-      flash: 
+      flash:
         create_success: Nowy produkt został utworzony
         update_success: Produkt został zaktualizowany
         destroy_success: Produkt został usunięty
@@ -211,7 +185,7 @@ pl:
       new_resource: Nowa metoda dostawy
       resources_list: Lista metod dostawy
       edit_resource: Edycja metody dostawy
-      flash: 
+      flash:
         create_success: Nowa metoda dostawy została utworzona
         update_success: Metoda dostawy została zaktualizowana
         destroy_success: Metoda dostawy została usunięta
@@ -220,7 +194,7 @@ pl:
       new_resource: Nowa metoda płatności
       resources_list: Lista metod płatności
       edit_resource: Edycja metody płatności
-      flash: 
+      flash:
         create_success: Nowa metoda płatności została utworzona
         update_success: Metoda płatności została zaktualizowana
         destroy_success: Metoda płatności została usunięta
@@ -282,7 +256,7 @@ pl:
     static_page:
       name: Strony tekstowe
       new_resource: Nowa strona tekstowa
-      resources_list: Lista stron tekstowych 
+      resources_list: Lista stron tekstowych
       edit_resource: Edycja strony
       flash:
         create_success: Nowa strona tekstowa została utworzona
@@ -302,7 +276,7 @@ pl:
       new_resource: Nowy tag
       resources_list: Lista tagów
       edit_resource: Edycja tagu
-      flash: 
+      flash:
         create_success:  Nowy tag został utworzony
         update_success: Tag został zaktualizowany
         destroy_success: Tag został usunięty
@@ -330,7 +304,7 @@ pl:
         create: Dodaj pracownika
         sign_in: Zaloguj
       static_page:
-        create: Dodaj strone tekstowa 
+        create: Dodaj strone tekstowa
       article_category:
         create: Dodaj kategorie artykułu
       address:
