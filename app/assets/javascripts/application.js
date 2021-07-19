@@ -11,16 +11,3 @@
 // about supported directives.
 //
 //= require activestorage
-//= require turbolinks
-//= require jquery
-//= require rails-ujs
-//= require popper
-//= require bootstrap
-//= require cocoon
-//= require leaflet
-//= require_tree ./page/
-
-
-$(function() {
-
-});

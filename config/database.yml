@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
   database: joblist_dev
   user: joblist_user
   password: 123qwe
